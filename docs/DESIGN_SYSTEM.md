@@ -48,11 +48,37 @@ Never hardcode hex values. Always use CSS variables.
 
 Note: dark mode text-secondary (#7B6FA8) and text-muted (#5A5080) are contrast-corrected for WCAG AA.
 
-## Background
+## Background — expressive multi-stop gradient
 Always use ScreenBackground component. Never set background color directly on pages.
-Light: radial-gradient(ellipse at 65% 0%, #DDF4F0 0%, #ECEAF6 52%)
-Dark: radial-gradient(ellipse at 65% 0%, #081E1B 0%, #0E0D18 52%)
+
+Light mode:
+radial-gradient(ellipse at 15% 0%, #E8D5FF 0%, #ECEAF6 30%, #C8F4EE 65%, #EBE6FF 100%)
+
+Dark mode:
+radial-gradient(ellipse at 15% 0%, #2D1B69 0%, #0E0D18 35%, #081E1B 68%, #1A0E2E 100%)
+
+The gradient is intentionally expressive and colorful — violet bleeds from top-left, neutral base in the middle, teal in the lower right. Cards sit on top with frosted glass so the gradient shows through dramatically. This is a feature not a bug — the more colorful the background, the better the glass effect reads.
+
 Fixed position, full viewport, z-index -1.
+
+### Hero card art area — multi-stop gradient
+Light: linear-gradient(135deg, #E8D5FF 0%, #C8F4EE 50%, #D5F0FF 100%)
+Dark: linear-gradient(135deg, #2D1B69 0%, #081E1B 50%, #0A1E2E 100%)
+
+### Player color palette
+Each player in a session is assigned a color from this fixed 8-color palette. Used for avatar backgrounds and score card tints. Never use violet for all players — assign colors sequentially:
+
+1. #7C3AED — violet
+2. #0D9E87 — teal
+3. #EA580C — coral
+4. #D97706 — amber
+5. #16A34A — sage
+6. #0284C7 — sky
+7. #DB2777 — rose
+8. #475569 — slate
+
+Player avatar: w-9 h-9 rounded-full, player color as background, white text, font-display font-black text-sm
+Score card tint: player color at 8% opacity as background overlay on L2 card
 
 ## Elevation — liquid glass
 Three levels only. Always use Card component.

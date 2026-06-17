@@ -124,6 +124,27 @@ Deployed: No — pending Vercel setup
 - [ ] Extended game history beyond 6 months
 - [ ] Profile themes and badge customization
 
+## Feature additions from competitive analysis
+
+### Competitive analysis additions — prioritized
+
+High priority (add to Session 4 — game session):
+- [ ] Score entry numpad — dedicated modal with large number buttons instead of text input. Much more usable at a game table. Numpad grid: 1-9, 0, backspace, confirm.
+- [ ] Colored player avatars — assign each player a color from the 8-color palette in DESIGN_SYSTEM.md. Color carries through avatar, score card tint, and any per-player charts.
+- [ ] Win celebration screen — full screen moment after game ends. Tally marks animate in one by one (Framer Motion), then confetti bursts, winner name in Nunito 900 54px, teal "Play again" and ghost "Done" CTAs. Most shareable moment in the app.
+- [ ] Pause / resume session — add pause state to sessions. Status: active / paused / completed / abandoned. Paused sessions appear on home screen with "Resume" CTA prominently.
+
+Medium priority (add to Session 5 — game tools):
+- [ ] Game tools drawer — slide-up panel accessible during a live session via tools icon in header. Contains: countdown timer (set minutes, start/pause/reset), dice roller (1 die or 2 dice, animated roll), random player picker (spins through player names, lands on one), coin flip (heads/tails animation). Framer Motion for all animations.
+- [ ] Active session on home screen — if a session is in progress or paused, show it as a hero card on home with a "Resume" button instead of the last played card.
+
+Medium priority (add to Session 5 — leaderboard):
+- [ ] Rank movement indicators — show ↑2 in teal or ↓1 in muted rose next to each leaderboard rank. Compare current rank to rank from previous session.
+
+Lower priority (Phase 2):
+- [ ] Buzzer — hold-to-buzz interaction with haptic feedback. Fun but not core.
+- [ ] Share celebration screen — export win celebration as an image to share to group chat.
+
 ## Known issues and tech debt
 - csstype may have been corrupted during initial npm install — needs verification
 - Geist fonts were used instead of Nunito + Open Sans — needs correction in root layout
