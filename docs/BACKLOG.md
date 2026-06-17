@@ -1,4 +1,4 @@
-# Tally Feature Backlog
+# Rally Feature Backlog
 
 ## Current status
 Framework: Next.js 14 App Router
@@ -116,9 +116,9 @@ Deployed: No — pending Vercel setup
 - [ ] Performance audit — Core Web Vitals
 - [ ] Image optimization
 
-### Phase 2 — Tally Pro
+### Phase 2 — Rally Pro
 - [ ] Stripe integration
-- [ ] Tally Pro paywall — $2.99/month or $19.99/year
+- [ ] Rally Pro paywall — $2.99/month or $19.99/year
 - [ ] Unlimited AI rules chat for Pro users
 - [ ] Shareable score summary cards (image export)
 - [ ] Extended game history beyond 6 months

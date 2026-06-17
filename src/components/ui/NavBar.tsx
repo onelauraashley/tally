@@ -45,7 +45,7 @@ export default function NavBar() {
             className="font-display font-black text-[15px]"
             style={{ color: 'var(--color-text-primary)' }}
           >
-            Tally
+            Rally
           </span>
         </Link>
 

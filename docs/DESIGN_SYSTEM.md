@@ -1,4 +1,4 @@
-# Tally Design System
+# Rally Design System
 
 ## Visual identity
 Cozy, warm, board game night. NOT SaaS. NOT AI chat. NOT neon gaming. NOT generic Tailwind defaults.

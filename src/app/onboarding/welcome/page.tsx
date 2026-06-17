@@ -26,7 +26,7 @@ export default function OnboardingWelcomePage() {
           className="font-display font-black text-[28px] tracking-tight"
           style={{ color: 'var(--color-text-primary)' }}
         >
-          Tally
+          Rally
         </h1>
 
         {/* Tally mark SVG */}

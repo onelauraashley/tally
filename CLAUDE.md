@@ -1,7 +1,7 @@
 @AGENTS.md
-# Tally — Claude Code Agent Guide
+# Rally — Claude Code Agent Guide
 
-Tally is a cozy, warm game night score tracking web app. Responsive web first, mobile PWA second. Built with Next.js 14 App Router + Supabase + Tailwind CSS.
+Rally is a cozy, warm game night score tracking web app. Responsive web first, mobile PWA second. Built with Next.js 14 App Router + Supabase + Tailwind CSS.
 
 ## Read these docs every session
 - docs/BRIEF.md

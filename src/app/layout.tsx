@@ -16,7 +16,7 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Tally',
+  title: 'Rally',
   description: 'Cozy game night score tracking',
 }
 

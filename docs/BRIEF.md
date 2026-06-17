@@ -1,7 +1,7 @@
-# Tally — Product Brief
+# Rally — Product Brief
 
 ## Vision
-Tally is a cozy, warm game night companion that makes it effortless to track scores, settle rule disputes, and celebrate who's actually winning the long game across your friend group.
+Rally is a cozy, warm game night companion that makes it effortless to track scores, settle rule disputes, and celebrate who's actually winning the long game across your friend group.
 
 ## Target audience
 - Primary: Adults 25–45 who regularly play board, card, and lawn games with friends or family
@@ -9,7 +9,7 @@ Tally is a cozy, warm game night companion that makes it effortless to track sco
 - Geographic: English-speaking markets, US first
 
 ## App name
-Tally — a tally mark is the icon motif. Simple, universal, readable at any size.
+Rally — a tally mark is the icon motif. Simple, universal, readable at any size.
 
 ## Platform
 - Web first (responsive, deployed on Vercel)
@@ -33,7 +33,7 @@ Open Sans 400/600 for all UI text — labels, metadata, inputs, timestamps.
 
 ## Monetization
 Free with soft rate limit on AI rules chat (10 questions per user per day).
-Phase 2: Tally Pro at $2.99/month for unlimited AI chat, shareable score cards, extended history, profile themes.
+Phase 2: Rally Pro at $2.99/month for unlimited AI chat, shareable score cards, extended history, profile themes.
 Core features (scoring, leaderboards, friends, preset games) stay free forever.
 
 ## Success metrics

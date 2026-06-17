@@ -1,4 +1,4 @@
-# Tally Games Reference
+# Rally Games Reference
 
 ## Preset games (25 — already seeded in Supabase with UUIDs)
 

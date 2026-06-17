@@ -102,7 +102,7 @@ export default function SignupPage() {
               <IconDice size={30} stroke={1.5} className="text-white" />
             </div>
             <h1 className="font-display font-black text-[28px]" style={{ color: 'var(--color-text-primary)' }}>
-              Tally
+              Rally
             </h1>
             <p className="font-ui text-[12px]" style={{ color: 'var(--color-text-secondary)' }}>
               Create your game night hub
