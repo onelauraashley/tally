@@ -32,18 +32,49 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser()
 
   const { pathname } = request.nextUrl
-  const isAuthRoute = pathname.startsWith('/login') || pathname.startsWith('/signup')
 
+  const isAuthRoute      = pathname.startsWith('/login') || pathname.startsWith('/signup')
+  const isOnboarding     = pathname.startsWith('/onboarding')
+  const isAuthCallback   = pathname.startsWith('/auth')
+
+  // Auth callback: always let through
+  if (isAuthCallback) return supabaseResponse
+
+  // Unauthenticated: only allow /login and /signup
   if (!user && !isAuthRoute) {
     const url = request.nextUrl.clone()
     url.pathname = '/login'
     return NextResponse.redirect(url)
   }
 
+  // Authenticated on login/signup: send to app
   if (user && isAuthRoute) {
     const url = request.nextUrl.clone()
     url.pathname = '/'
     return NextResponse.redirect(url)
+  }
+
+  // Authenticated on main routes: check profile completeness
+  if (user && !isOnboarding) {
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('display_name')
+      .eq('id', user.id)
+      .single()
+
+    if (!profile) {
+      // No profile row → start onboarding from the top
+      const url = request.nextUrl.clone()
+      url.pathname = '/onboarding/welcome'
+      return NextResponse.redirect(url)
+    }
+
+    if (!profile.display_name?.trim()) {
+      // Profile exists but name not set → skip to profile step
+      const url = request.nextUrl.clone()
+      url.pathname = '/onboarding/profile'
+      return NextResponse.redirect(url)
+    }
   }
 
   return supabaseResponse
